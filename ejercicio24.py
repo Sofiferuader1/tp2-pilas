@@ -11,7 +11,8 @@ apilar(personajes, ("Rocket Raccoon", 5))
 apilar(personajes, ("Black Widow", 8))
 apilar(personajes, ("Thor", 9))
 
-
+# Recorro la pila buscando a Rocket y Groot.
+# Cuento sus posiciones y guardo los personajes en una pila auxiliar. 
 print("POSICIONES DE ROCKET RACCOON Y GROOT")
 
 posicion = 1
@@ -33,7 +34,8 @@ while not pila_vacia(personajes):
 
     posicion += 1 # es una forma abreviada de escribir posicion = posicion + 1
 
-
+# Busco personajes con más de 5 películas.
+# Devuelvo los elementos a la pila principal.
 print("\nPERSONAJES CON MÁS DE 5 PELÍCULAS")
 
 while not pila_vacia(auxiliar):
@@ -48,6 +50,8 @@ while not pila_vacia(auxiliar):
 
     apilar(personajes, personaje)
 
+# Busco a Black Widow y muestro cuántas películas tiene.
+# Paso los personajes a la pila auxiliar.
 print("\nPELÍCULAS DE BLACK WIDOW")
 
 while not pila_vacia(personajes):
@@ -62,6 +66,8 @@ while not pila_vacia(personajes):
 
     apilar(auxiliar, personaje)
 
+# Busco nombres que comiencen con C, D o G usando startswith().
+# Devuelvo los personajes a la pila principal.
 print("\nPERSONAJES QUE EMPIEZAN CON C, D Y G") # /n es para que haga un salto de línea
 
 while not pila_vacia(auxiliar):
